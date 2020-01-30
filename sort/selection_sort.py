@@ -3,6 +3,7 @@ from random import shuffle, randint
 
 def selection_sort(data: list):
     for i in range(len(data)):
+        # TODO: Do not used function to find min
         num_min = min(data[i:len(data)])
         num_ind = data.index(num_min)
         data[i], data[num_ind] = data[num_ind], data[i]
