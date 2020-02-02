@@ -14,15 +14,8 @@ def insertion_sort(data: list):
 
 def insertion_sort_new(data: list):
     for i in range(1, len(data)):
-        # TODO: DeadLine = Today
-        pass
-
-
-
-def insertion_sort_result(data: list):
-    for i in range(1, len(data)):
-        tmp = data[i]
         j = i - 1
+        tmp = data[i]
         while j >= 0 and tmp < data[j]:
             data[j+1] = data[j]
             j -= 1
@@ -31,10 +24,8 @@ def insertion_sort_result(data: list):
 
 
 if __name__ == "__main__":
-    # num = 10
-    # data = [n for n in range(1, num+randint(1, 2))]
-    # shuffle(data)
-    data = [2, 8, 7, 9, 11, 10, 5, 6, 4, 1, 3]
-    # data = [20, 9, 100, 0, 55, 3 ,11]
+    num = 10
+    data = [n for n in range(1, num+randint(1, 2))]
+    shuffle(data)
     print('origin:', data)
     insertion_sort_new(data)
