@@ -1,7 +1,7 @@
-from util import test_func
 import os
 import sys
 sys.path.append(os.getcwd())
+from util import test_func
 
 
 def bubble_sort(data):
