@@ -1,9 +1,11 @@
-from random import shuffle, randint
+import os
+import sys
+sys.path.append(os.getcwd())
+from util import test_func
 
 
 def selection_sort(data: list):
     for i in range(len(data)):
-        # TODO: Do not used function to find min
         num_min = min(data[i:len(data)])
         num_ind = data.index(num_min)
         data[i], data[num_ind] = data[num_ind], data[i]
@@ -11,8 +13,4 @@ def selection_sort(data: list):
 
 
 if __name__ == "__main__":
-    num = 10
-    data = [n for n in range(1, num+randint(1, 2))]
-    shuffle(data)
-    print('origin:', data)
-    selection_sort(data)
+   test_func(selection_sort)

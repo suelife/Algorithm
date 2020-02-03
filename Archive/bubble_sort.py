@@ -1,4 +1,7 @@
-from random import shuffle, randint
+import os
+import sys
+sys.path.append(os.getcwd())
+from util import test_func
 
 
 def bubble_sort(data: list):
@@ -16,8 +19,4 @@ def bubble_sort(data: list):
 
 
 if __name__ == "__main__":
-    num = 10
-    data = [n for n in range(1, num+randint(1, 2))]
-    shuffle(data)
-    print('origin:', data)
-    bubble_sort(data)
+    test_func(bubble_sort)

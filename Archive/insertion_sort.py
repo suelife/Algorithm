@@ -1,4 +1,7 @@
-from random import shuffle, randint
+import os
+import sys
+sys.path.append(os.getcwd())
+from util import test_func
 
 
 def insertion_sort(data: list):
@@ -24,8 +27,4 @@ def insertion_sort_new(data: list):
 
 
 if __name__ == "__main__":
-    num = 10
-    data = [n for n in range(1, num+randint(1, 2))]
-    shuffle(data)
-    print('origin:', data)
-    insertion_sort_new(data)
+    test_func(insertion_sort_new)
